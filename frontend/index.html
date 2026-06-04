@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BayRecruit Multi-Cloud Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="loadDashboard()">
+
+  <header class="top-nav">
+    <div>
+      <h1>BayRecruit.AI</h1>
+      <p>Multi-Cloud DevOps Platform</p>
+    </div>
+
+    <nav>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#cloud">Cloud Infrastructure</a>
+      <a href="#operations">Operations</a>
+      <a href="#ai">AI Assistant</a>
+    </nav>
+
+    <div>
+      <span class="live-badge">Live</span>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </header>
+
+  <main class="container" id="dashboard">
+
+    <section class="hero">
+      <h2>Business-Oriented Multi-Cloud Operations Dashboard</h2>
+      <h3 id="companyName">Company Dashboard</h3>
+      <p>Monitor AWS, Azure, and GCP operations from one central platform.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Login Activity</h2>
+      <p id="loginInfo">Login details will appear here.</p>
+    </section>
+
+    <section class="panel" id="adminMonitoring">
+      <h2>Admin Real-Time Monitoring</h2>
+      <p>Platform-wide monitoring for all client logins, risks, costs, and activity.</p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Currently Online</h3>
+          <p id="onlineUsers">0</p>
+        </div>
+
+        <div class="card">
+          <h3>Failed Logins</h3>
+          <p id="failedLogins">0</p>
+        </div>
+
+        <div class="card">
+          <h3>High Cost Alerts</h3>
+          <p id="highCostAlerts">0</p>
+        </div>
+
+        <div class="card">
+          <h3>Inactive Clients</h3>
+          <p id="inactiveClients">0</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cards">
+
+      <div class="card">
+        <h3>Active Clients</h3>
+        <p id="activeClients">24</p>
+      </div>
+
+      <div class="card">
+        <h3>Cloud Resources</h3>
+        <p id="cloudResources">128</p>
+      </div>
+
+      <div class="card">
+        <h3>Open Tasks</h3>
+        <p id="openTasks">17</p>
+      </div>
+
+      <div class="card">
+        <h3>Monthly Cost</h3>
+        <p id="monthlyCost">$4.2K</p>
+      </div>
+
+    </section>
+
+    <section class="panel" id="cloud">
+      <h2>Cloud Infrastructure</h2>
+
+      <div class="cloud-grid">
+        <div class="cloud-box">
+          <h3>AWS</h3>
+          <p>ECS Fargate, DynamoDB, CloudWatch</p>
+        </div>
+
+        <div class="cloud-box">
+          <h3>Azure</h3>
+          <p>Entra ID, RBAC, Authentication</p>
+        </div>
+
+        <div class="cloud-box">
+          <h3>GCP</h3>
+          <p>Cloud Storage, Report Snapshots</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="operations">
+      <h2>Recent Operations</h2>
+
+      <table>
+        <tr>
+          <th>Task</th>
+          <th>Cloud</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td>Frontend Deployment</td>
+          <td>AWS</td>
+          <td>Success</td>
+        </tr>
+        <tr>
+          <td>RBAC Access Demo</td>
+          <td>Azure</td>
+          <td>Ready</td>
+        </tr>
+        <tr>
+          <td>Report Storage</td>
+          <td>GCP</td>
+          <td>Planned</td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="panel" id="ai">
+      <h2>AI Cloud Assistant</h2>
+      <p id="aiText">AI Recommendation: Review unused resources to reduce cloud cost.</p>
+      <button onclick="generateInsight()">Generate AI Insight</button>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
